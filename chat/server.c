@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<stdlib.h>
 #include<strings.h>
 #include<unistd.h>
 #include<sys/types.h>
@@ -99,6 +100,7 @@ void process_cli(int connfd,struct sockaddr_in client)
 	}
 	cli_name[num-1]='\0';
 	printf("%s client's name is %s.\n",inet_ntoa(client.sin_addr),cli_name);
+
 	while(num=recv(connfd,recvbuf,MAXDATASIZE,0))
 	{
 		recvbuf[num]='\0';
