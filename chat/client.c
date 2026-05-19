@@ -66,7 +66,7 @@ void process(FILE *fp,int sockfd)
 	char cname[30];
 	char tmp[100];
 	printf("Connected to server.\n");
-	printf("Ipot client's name:");
+	printf("Input client's name:");
 	if(fgets(cname,30,fp)==NULL)
 	{
 		printf("\nExit.\n");
